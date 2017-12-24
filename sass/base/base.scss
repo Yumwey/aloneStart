@@ -1,0 +1,147 @@
+
+$baseFontSize: 16;
+@mixin px2rem($name, $px){
+  #{$name}: $px / $baseFontSize * 1rem !important;
+}
+
+.am-btn-black {
+    background: transparent !important;
+    color: $primaryBg !important;
+    border: 1px solid $primaryBg !important;
+}
+footer.footer {
+    padding: 0 10px 10px 10px;
+    background-color: #30383c;
+    .footer-img {
+        text-align: center;
+        @include px2rem(height, 100);
+        @include px2rem(line-height, 100);
+        img {
+            width: 60%;
+        }
+    }
+    .footer-tip {
+        color: #828282;
+        @include px2rem(font-size, 20);
+        li {
+            // border-left: 1px solid #828282;
+            padding-left: 8px;
+            position: relative;
+            &:after {
+                content: "| ";
+                padding-right: 0px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            ins {
+                color: #828282;
+                background-color: transparent;
+            }
+            p {
+                width: 90%;
+                vertical-align: top;
+                display: inline-block;
+            }
+            
+        }
+    }
+    p.after-tip{
+        margin-left: 10px;
+        color: #828282;
+        @include px2rem(font-size, 20);
+    }
+}
+.h1_00 {
+    height: 100%;
+}
+.w_100 {
+    width: 100%;
+}
+.lh_100 {
+    line-height: 100%;
+}
+.mt-10 {
+    @include px2rem(margin-top, 10)
+}
+.mt-20 {
+    @include px2rem(margin-top, 20)
+}
+.w_50 {
+    width: 50%;
+}
+.p-r {
+    position: relative;
+}
+.p-a {
+    position: absolute
+}
+
+.b-0 {
+    bottom: 0;
+}
+.r-0 {
+    right: 0;
+}
+.d-iflex {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.f-e {
+    justify-content: flex-end;
+}
+.f-s {
+    justify-content: flex-start;
+}
+.bg-android {
+    background: url(../images/android1.png) no-repeat;
+    @include px2rem(width, 20);
+    @include px2rem(height, 20);
+}
+.title {
+    @include px2rem(height, 60);
+    @include px2rem(line-height, 60);
+    text-align: center;
+    @include px2rem(font-size, 30);
+    background: $primaryBg;
+}
+
+//videoJS reset
+#my-video {
+    width: 100vw;
+}
+.my-video-dimensions {
+    @include px2rem(height, 300);
+}
+.video-js .vjs-big-play-button{
+    border-radius: 50%;
+    @include px2rem(height, 80);
+    @include px2rem(width, 80);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+}
+.video-js .vjs-big-play-button:before, .video-js .vjs-control:before, .video-js .vjs-modal-dialog, .vjs-modal-dialog .vjs-modal-dialog-content {
+    top: 12%;
+}
+.video-js .vjs-control:before{
+    @include px2rem(font-size, 40);
+    @include px2rem(line-height, 40);
+}
+.video-js .vjs-mute-control, .video-js .vjs-volume-menu-button {
+    display: none;
+}
+.video-js .vjs-play-progress {
+    background-color: #1eb6e0;
+    border-radius: 10px;
+}
+.video-js .vjs-slider{
+    border-radius: 10px;
+    @include px2rem(height, 10);
+}
+.video-js .vjs-play-progress:before{
+    @include px2rem(font-size, 25);
+    @include px2rem(top, -5);
+}

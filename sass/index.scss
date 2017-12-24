@@ -1,10 +1,50 @@
 @import 'base/color.scss';
+@import 'base/reset.scss';
+@import 'base/base.scss';
 
-body, html {
-    padding: 0;
-    margin: 0;
-    background: $pageBg;
+
+.image-full {
+    height: 100vh;
+    width: 100vw;
 }
-.bg {
-    background: url(../../images/bg.jpg);
+.fixed-banner {
+    background: url(../images/yidong_banner.png) no-repeat;
+    background-size: cover;
+    width: 100vw;
+    @include px2rem(height, 160);
+    @include px2rem(line-height, 160);
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    // display: none;
+}
+.am-tabs-extend {
+    background: $primaryBg;
+    margin: 0;
+    padding-top: 10px;
+}
+.news {
+    color: #696969;
+    
+    li {
+        @include px2rem(height, 50);
+        @include px2rem(line-height, 50);
+        a {
+            color: #696969;
+            &:hover,&:active {
+                color: #ff6700;
+            }
+        }
+        span {
+            float: right;
+            @include px2rem( margin-right , 10);
+        }
+        &:hover,&:active {
+            color: #ff6700;
+        }
+    }
+}
+.title-contain {
+    background: $primaryBg;
+    @include px2rem( padding-bottom , 20);
 }

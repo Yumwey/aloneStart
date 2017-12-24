@@ -129,7 +129,7 @@ gulp.task('mobileServer', function() {
 //监听页面
 
 gulp.task('watch', function() {
-    gulp.watch('./view/**/*.html',['html']);
+    gulp.watch('./view/**/*.html',['html','sass']);
     gulp.watch('./sass/**/*.scss', ['sass']);
 });
 
