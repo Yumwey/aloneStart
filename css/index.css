@@ -96,6 +96,48 @@ footer.footer {
     color: #828282;
     font-size: 1.25rem !important; }
 
+.btn-vr {
+  display: block;
+  height: 3.125rem !important;
+  width: 9.375rem !important;
+  line-height: 3.125rem !important;
+  border-radius: 0.625rem !important;
+  color: #000;
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+  text-align: center;
+  background-color: #fff; }
+  .btn-vr.btn-android {
+    background-color: #82b12e;
+    color: #fff;
+    position: relative;
+    padding-left: 2.5rem !important;
+    margin-top: 0.625rem !important; }
+    .btn-vr.btn-android:before {
+      content: "";
+      height: 1.5625rem !important;
+      width: 1.5625rem !important;
+      position: absolute;
+      background: url(../../images/android1.png) no-repeat;
+      background-size: contain;
+      left: 0.625rem !important;
+      top: 0.625rem !important; }
+  .btn-vr.btn-ios {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    position: relative;
+    padding-left: 2.5rem !important; }
+    .btn-vr.btn-ios:before {
+      content: "";
+      height: 1.5625rem !important;
+      width: 1.5625rem !important;
+      position: absolute;
+      background: url(../../images/ios.png) no-repeat;
+      background-size: contain;
+      left: 0.625rem !important;
+      top: 0.625rem !important; }
+
 .h1_00 {
   height: 100%; }
 
@@ -195,7 +237,6 @@ footer.footer {
   background-size: cover;
   width: 100vw;
   height: 10rem !important;
-  line-height: 10rem !important;
   position: fixed;
   bottom: 0;
   z-index: 9999; }
@@ -204,6 +245,9 @@ footer.footer {
   background: #fff;
   margin: 0;
   padding-top: 10px; }
+
+.btn-gruop {
+  margin-top: 1.875rem !important; }
 
 .news {
   color: #696969; }

@@ -52,6 +52,55 @@ footer.footer {
         @include px2rem(font-size, 20);
     }
 }
+.btn-vr {
+    display: block;
+    @include px2rem(height, 50);
+    @include px2rem(width, 150);
+    @include px2rem(line-height, 50);
+    @include px2rem(border-radius, 10);
+    // padding: 5px 10px 5px 10px;
+    color: #000;
+    @include px2rem(padding-left, 20);
+    @include px2rem(padding-right, 20);
+    text-align: center;
+    background-color: #fff;
+    &.btn-android {
+        
+        background-color: #82b12e;
+        
+        color: #fff;
+        position: relative;
+        @include px2rem(padding-left, 40);
+        @include px2rem(margin-top, 10);
+        &:before {
+            content: "";
+            @include px2rem(height, 25);
+            @include px2rem(width, 25);
+            position: absolute;
+            background: url(../../images/android1.png) no-repeat;
+            background-size: contain;
+            @include px2rem(left, 10);
+            @include px2rem(top, 10);
+        }
+    }
+    &.btn-ios {
+        background-color: #000;
+        color: #fff;
+        border: 1px solid #fff;
+        position: relative;
+        @include px2rem(padding-left, 40);
+        &:before {
+            content: "";
+            @include px2rem(height, 25);
+            @include px2rem(width, 25);
+            position: absolute;
+            background: url(../../images/ios.png) no-repeat;
+            background-size: contain;
+            @include px2rem(left, 10);
+            @include px2rem(top, 10);
+        }
+    }
+}
 .h1_00 {
     height: 100%;
 }
