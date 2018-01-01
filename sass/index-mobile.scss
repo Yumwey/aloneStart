@@ -1,0 +1,92 @@
+@import 'base/color.scss';
+@import 'base/reset.scss';
+@import 'base/base.scss';
+
+
+.image-full {
+    height: 100vh;
+    width: 100vw;
+}
+.title-img {
+    position: absolute;
+    @include px2rem(left, 20);
+    @include px2rem(top, 20);
+    img {
+        @include px2rem(height, 60);
+    }
+}
+.fixed-banner {
+    background: url(../images/yidong_banner.png) no-repeat;
+    background-size: cover;
+    width: 100vw;
+    @include px2rem(height, 160);
+    // @include px2rem(line-height, 160);
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    display: none;
+    .title-down {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        @include px2rem(padding-bottom, 10);
+        img {
+            @include px2rem(height, 60);
+            // @include px2rem(width, 200);
+        }
+    }
+    .close-btn {
+        display: block;
+        @include px2rem(height, 40);
+        @include px2rem(width, 40);
+        background: url(../images/close.png) no-repeat;
+        background-size: contain;
+        position: absolute;
+        @include px2rem(right, 10);
+        @include px2rem(top, 10);
+        border-radius: 50%;
+        &:active {
+            box-shadow: 0px 0px 6px white;
+        }
+
+    }
+}
+.am-tabs-extend {
+    background: $primaryBg;
+    margin: 0;
+    padding-top: 10px;
+}
+.btn-gruop {
+    @include px2rem(margin-top, 25);
+    @include px2rem(padding-left, 30);
+}
+.news {
+    color: #696969;
+    
+    li {
+        @include px2rem(height, 50);
+        @include px2rem(line-height, 50);
+        a {
+            color: #696969;
+            display: inline-block;
+            max-width: 70%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            &:hover,&:active {
+                color: #ff6700;
+            }
+        }
+        span {
+            float: right;
+            @include px2rem( margin-right , 10);
+        }
+        &:hover,&:active {
+            color: #ff6700;
+        }
+    }
+}
+.title-contain {
+    background: $primaryBg;
+    @include px2rem( padding-bottom , 20);
+}

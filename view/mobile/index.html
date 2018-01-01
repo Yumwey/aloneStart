@@ -15,12 +15,15 @@
 
     <link rel="stylesheet" media="all" href="//cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css" />
     <link href="//vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet">
-    <link rel="stylesheet" media="all" href="../../css/index.css" />
+    <link rel="stylesheet" media="all" href="../../css/index-mobile.css" />
 
 </head>
 
 <body>
     <div class="am-container">
+        <div class="title-img">
+            <img src="../../images/logo1.png" />
+        </div>
         <div class="am-g">
             <img src="../../images/shouye_banner1.jpg" class="am-img-responsive image-full" alt="陪伴星球VR-banner" />
             <div class="fixed-banner">
@@ -32,9 +35,10 @@
                         安卓下载
                     </a>
                 </div>
-                <div class="p-a b-0 r-0 d-iflex f-e">
-                    <!-- <img src="../../images/logo2.png" alt="logo"> -->
+                <div class="p-a b-0 r-0 d-iflex f-e title-down">
+                    <img src="../../images/yidong_logo.png" alt="logo">
                 </div>
+                <i class="close-btn" id="closeBtn"></i>
             </div>
             <div data-am-widget="slider" class="am-slider am-slider-a1 mt-10" id="slide-bar" data-am-slider='{&quot;directionNav&quot;:false}'>
                 <ul class="am-slides">
@@ -68,7 +72,7 @@
                     <div data-tab-panel-0 class="am-tab-panel am-active">
                         <ul class="news">
                             <li>
-                                <a>【资讯】陪伴星球VR,开放公测啦！</a>
+                                <a href="./detail.html">【资讯】陪伴星球VR,开放公测啦！</a>
                                 <span>2016-2-1</span>
                             </li>
                             <li>
@@ -216,10 +220,22 @@
 <script type="text/javascript" src="../../js/base.js"></script>
 <script type=text/javascript "">
     $(function () {
-        // var $slideBar = $('#slide-bar');
-        // $slideBar.flexslider({
-        //     slideshowSpeed: 2000
-        // })
+        var localStorageCache = Window.localStorage || localStorage,
+            $closeBtn = $('#closeBtn');
+        var $fixBan = $('.fixed-banner');
+        var setBtnLocal = function () {
+             var btnClass;
+             localStorageCache.getItem('disabledBtn')? $fixBan.hide() : $fixBan.show();
+        }
+        $closeBtn.on('click', function() {
+            var $this = $(this);
+            // $fixBan.addClass('hide');
+            $fixBan.hide();
+            localStorageCache.setItem('disabledBtn','true');
+        })
+        setBtnLocal();
+        //清楚存储: For test
+        // localStorage.removeItem('disabledBtn');
     })
 </script>
 

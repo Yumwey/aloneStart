@@ -1,0 +1,50 @@
+@import 'base/color.scss';
+@import 'base/reset.scss';
+@import 'base/base.scss';
+
+.detail-contion {
+    min-height: 100vh;
+}
+.article-contain {
+    // @include px2rem(left, 20);
+    position: relative;
+    min-height: calc(100vh - 21.875rem);
+    .a-title {
+        position: relative;
+        @include px2rem(padding-left, 20);
+        @include px2rem(padding-top, 20);
+        @include px2rem(padding-right, 20);
+        @include px2rem(margin-bottom, 20);
+        @include px2rem(height, 80);
+        // overflow: hidden;
+        p.a-ti {
+            @include px2rem(font-size, 30);
+            font-weight: 500;
+        }
+        p.a-t {
+            position: absolute;
+            @include px2rem(right, 20);
+            color: #8a8787;
+            @include px2rem(font-size, 20);
+        }
+    }
+    .a-d {
+        @include px2rem(padding-left, 20);
+        @include px2rem(padding-top, 20);
+        @include px2rem(padding-right, 20);
+        @include px2rem(margin-bottom, 20);
+    }
+    .change-page {
+        position: relative;
+        a {
+            color: #000;
+            position: absolute;
+            &.pre {
+                @include px2rem(left, 20);
+            }
+            &.after {
+                @include px2rem(right, 20);
+            }
+        } 
+    }
+}

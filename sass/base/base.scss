@@ -12,6 +12,7 @@ $baseFontSize: 16;
 footer.footer {
     padding: 0 10px 10px 10px;
     background-color: #30383c;
+    @include px2rem(height, 350);
     .footer-img {
         text-align: center;
         @include px2rem(height, 100);
@@ -57,7 +58,7 @@ footer.footer {
     @include px2rem(height, 50);
     @include px2rem(width, 150);
     @include px2rem(line-height, 50);
-    @include px2rem(border-radius, 10);
+    @include px2rem(border-radius, 5);
     // padding: 5px 10px 5px 10px;
     color: #000;
     @include px2rem(padding-left, 20);
@@ -132,6 +133,9 @@ footer.footer {
 .r-0 {
     right: 0;
 }
+.mr-5 {
+    margin-right: 5px;
+}
 .d-iflex {
     display: inline-flex;
     flex-wrap: wrap;
@@ -141,6 +145,12 @@ footer.footer {
 }
 .f-s {
     justify-content: flex-start;
+}
+.hide {
+    display: none !important;
+}
+.show {
+    display: block !important;
 }
 .bg-android {
     background: url(../images/android1.png) no-repeat;
